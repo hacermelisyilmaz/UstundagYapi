@@ -4,14 +4,20 @@ import React from "react";
 export default function Header() {
   return (
     <header className="header">
-      <div className="logo">here's logo</div>
+      <div className="logo">logo</div>
 
-      <nav className="nav">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div className="header-right">
+        <nav className="nav">
+          <a href="#home">Ana Sayfa</a>
+          <a href="#projects">Projeler</a>
+          <a href="#about">Hakkımızda</a>
+          <a href="#contact">İletişim</a>
+        </nav>
+
+        <div className="form-btn">
+          <a href="#form">Talep Formu</a>
+        </div>
+      </div>
     </header>
   );
 }

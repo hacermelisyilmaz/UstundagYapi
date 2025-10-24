@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
+import HeaderContent from "./components/HeaderContent";
+import Footer from "./components/Footer";
 import "./styles/App.css";
 
 function App() {
@@ -9,7 +11,9 @@ function App() {
     <>
       <div className="hero-section">
         <Header />
+        <HeaderContent />
       </div>
+      <Footer />
     </>
   );
 }
