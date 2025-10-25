@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Header from "./components/Header";
-import HeaderContent from "./components/HeaderContent";
-import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+
+import Home from "./pages/Home";
 import "./styles/App.css";
 
 function App() {
@@ -9,11 +9,9 @@ function App() {
 
   return (
     <>
-      <div className="hero-section">
-        <Header />
-        <HeaderContent />
-      </div>
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </>
   );
 }
