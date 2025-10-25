@@ -1,3 +1,5 @@
+import Navigation from "./Navigation";
+
 export default function Footer() {
   return (
     <div className="footer">
@@ -14,12 +16,9 @@ export default function Footer() {
 
         <div className="footer-right">
           <h3>Hızlı Menü</h3>
-          <nav className="footer-nav">
-            <a href="#home">Ana Sayfa</a>
-            <a href="#projects">Projeler</a>
-            <a href="#about">Hakkımızda</a>
-            <a href="#contact">İletişim</a>
-          </nav>
+          <div className="footer-nav">
+            <Navigation />
+          </div>
         </div>
       </div>
 

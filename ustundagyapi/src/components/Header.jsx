@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Navigation from "./Navigation";
 // import logo from "../assets/logo.png";
 
 export default function Header() {
@@ -7,16 +9,11 @@ export default function Header() {
       <div className="logo">logo</div>
 
       <div className="header-right">
-        <nav className="nav">
-          <a href="#home">Ana Sayfa</a>
-          <a href="#projects">Projeler</a>
-          <a href="#about">Hakkımızda</a>
-          <a href="#contact">İletişim</a>
-        </nav>
+        <Navigation />
 
-        <div className="form-btn">
-          <a href="#form">Talep Formu</a>
-        </div>
+        <Link to="/form">
+          <button className="form-btn">Talep Formu</button>
+        </Link>
       </div>
     </header>
   );
