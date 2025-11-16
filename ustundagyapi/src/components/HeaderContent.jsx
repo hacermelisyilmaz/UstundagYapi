@@ -5,7 +5,7 @@ export default function HeaderContent() {
         <div>Güvenin Temelinde</div>
         <div>Üstündağ Yapı</div>
       </div>
-      <div>
+      <div className="subtitle">
         1970’lerden bugüne, üç kuşaktır İstanbul’un geleceğini sağlam temeller
         üzerine inşa ediyoruz.
       </div>
