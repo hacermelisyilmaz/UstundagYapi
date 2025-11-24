@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Navigation() {
   return (
     <nav className="nav">
-      <Link to="/">
+      <Link to="/" reloadDocument>
         <div>Ana Sayfa</div>
       </Link>
 
