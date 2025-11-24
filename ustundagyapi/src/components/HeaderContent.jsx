@@ -18,8 +18,8 @@ export default function HeaderContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
       >
-        1970’lerden bugüne, üç kuşaktır İstanbul’un geleceğini sağlam temeller
-        üzerine inşa ediyoruz.
+        Üç kuşaktır İstanbul’un geleceğini sağlam temeller üzerine inşa
+        ediyoruz.
       </motion.div>
     </div>
   );

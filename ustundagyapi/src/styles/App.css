@@ -3,6 +3,7 @@
   text-decoration: none;
 }
 
+html,
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Montserrat, sans-serif;
@@ -11,16 +12,34 @@ body {
   font-size: 15px;
 }
 
+.home {
+  overflow-x: hidden;
+}
+
+.projects-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../assets/12.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  z-index: 1;
+}
+
+.hero > * {
+  z-index: 3;
+  position: relative;
 }
 
 .header {
@@ -29,6 +48,7 @@ body {
   align-items: start;
   padding-right: 2rem;
   height: 110px;
+  transition: opacity 0.3s ease-out;
 }
 
 .logo {
@@ -72,6 +92,7 @@ body {
   align-items: left;
   text-align: left;
   padding: 6rem 3rem;
+  transition: opacity 0.3s ease-out;
 }
 
 .header-content .slogan {
@@ -84,6 +105,33 @@ body {
   font-size: 20px;
   padding-bottom: 4rem;
   font-weight: 400;
+}
+
+.projects-sheet {
+  height: 100vh;
+  width: 100%;
+  background: white;
+  position: relative;
+  z-index: 2;
+
+  box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-inner {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.projects-inner h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .form-btn {
