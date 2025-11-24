@@ -1,12 +1,11 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
-// import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpg";
 
 export default function Header() {
   return (
     <header className="header">
-      <div className="logo">logo</div>
+      <img src={logo} alt="Üstündağ Yapı" className="logo" />
 
       <div className="header-right">
         <Navigation />
