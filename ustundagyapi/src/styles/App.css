@@ -23,6 +23,7 @@ body {
 }
 
 .hero {
+  color: whitesmoke;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -110,7 +111,6 @@ body {
 .projects-sheet {
   height: 100vh;
   width: 100%;
-  background: white;
   position: relative;
   z-index: 2;
 
@@ -122,16 +122,98 @@ body {
 }
 
 .projects-inner {
-  width: 90%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 0;
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  padding: 0 20px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .projects-inner h2 {
   font-size: 48px;
-  margin-bottom: 40px;
   text-align: center;
+  margin: 0;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  cursor: grab;
+}
+
+.carousel-item {
+  min-width: 300px;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.25); /* increase size by 25% */
+  z-index: 5; /* bring hovered card on top */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* optional shadow */
+}
+
+.carousel-item:hover ~ .carousel-item {
+  transform: translateX(10px); /* right neighbors move */
+}
+
+.carousel-item:hover ~ .carousel-item ~ .carousel-item {
+  transform: translateX(20px); /* optional for more distance */
+}
+
+/* Left neighbors */
+.carousel-item:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 15px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+.carousel-btn.next {
+  right: 10px;
 }
 
 .form-btn {
