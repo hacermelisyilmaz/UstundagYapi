@@ -1,14 +1,26 @@
+import { motion } from "framer-motion";
+
 export default function HeaderContent() {
   return (
     <div className="header-content">
-      <div className="slogan">
+      <motion.div
+        className="slogan"
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <div>Güvenin Temelinde</div>
         <div>Üstündağ Yapı</div>
-      </div>
-      <div className="subtitle">
+      </motion.div>
+      <motion.div
+        className="subtitle"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+      >
         1970’lerden bugüne, üç kuşaktır İstanbul’un geleceğini sağlam temeller
         üzerine inşa ediyoruz.
-      </div>
+      </motion.div>
     </div>
   );
 }
