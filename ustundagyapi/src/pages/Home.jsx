@@ -5,8 +5,10 @@ import Header from "../components/Header";
 export default function Home() {
   return (
     <div className="home">
-      <Header />
-      <HeaderContent />
+      <div className="hero">
+        <Header />
+        <HeaderContent />
+      </div>
       <Footer />
     </div>
   );
