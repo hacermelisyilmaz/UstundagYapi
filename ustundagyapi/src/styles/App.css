@@ -31,7 +31,7 @@ body {
   flex-direction: column;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../assets/12.jpg");
+    url("../assets/11.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,6 +72,7 @@ body {
   flex: 1;
   justify-content: space-evenly;
   max-width: 60vw;
+  font-size: larger;
 }
 
 .header-right .nav div {
@@ -167,20 +168,19 @@ body {
 }
 
 .carousel-item:hover {
-  transform: scale(1.25); /* increase size by 25% */
-  z-index: 5; /* bring hovered card on top */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* optional shadow */
+  transform: scale(1.25);
+  z-index: 5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-item:hover ~ .carousel-item {
-  transform: translateX(10px); /* right neighbors move */
+  transform: translateX(10px);
 }
 
 .carousel-item:hover ~ .carousel-item ~ .carousel-item {
-  transform: translateX(20px); /* optional for more distance */
+  transform: translateX(20px);
 }
 
-/* Left neighbors */
 .carousel-item:hover::before {
   content: "";
   display: block;
@@ -234,8 +234,152 @@ body {
   transform: translateY(-1px);
 }
 
+.projects .header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../assets/logo-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* --------------------------------------------- */
+/* GRID LAYOUT                                  */
+/* --------------------------------------------- */
+
+.projects-content {
+  padding: 2rem;
+}
+
+.projects-content h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  color: #222;
+}
+
+/* --------------------------------------------- */
+/* MODAL                                         */
+/* --------------------------------------------- */
+
+.modal-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+}
+
+.modal-image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  animation: modalFade 0.3s ease;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 28px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-prev,
+.modal-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: black;
+  border: none;
+  width: 42px;
+  height: 42px;
+  font-size: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-prev {
+  left: 16px;
+}
+
+.modal-next {
+  right: 24px;
+}
+
 .footer {
-  background-color: #272727;
+  background-image: url("../assets/logo-bg.jpg");
   color: #ccc;
   text-align: center;
 }
@@ -245,7 +389,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   text-align: start;
-  padding: 1rem 3rem;
+  padding: 2rem 3rem;
 }
 
 .footer .footer-left {
@@ -253,13 +397,22 @@ body {
   padding-right: 7rem;
 }
 
+.footer .footer-left div {
+  width: 70%;
+}
+
 .footer .footer-left .footer-logo {
   padding-bottom: 1rem;
+  height: 6rem;
+  width: auto;
 }
 
 .footer .footer-content .footer-right {
   width: 30vw;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .footer .footer-right h3 {
@@ -277,6 +430,7 @@ body {
 .footer .footer-right .footer-nav .nav div {
   color: white;
   transition: opacity 0.2s ease;
+  margin-bottom: 0.5rem;
 }
 
 .footer .footer-note {
