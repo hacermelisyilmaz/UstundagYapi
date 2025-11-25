@@ -1,11 +1,13 @@
 import Navigation from "./Navigation";
+import logo from "../assets/logo.jpg";
 
 export default function Footer() {
   return (
     <div className="footer">
       <div className="footer-content">
         <div className="footer-left">
-          <div className="footer-logo">logo</div>
+          <img src={logo} alt="Üstündağ Yapı" className="footer-logo" />
+
           <div>
             Üstündağ Yapı, temelleri 1970’li yıllarda atılmış, bugün 3. kuşak
             tarafından yönetilen köklü bir inşaat şirketidir. Kuruluşumuzdan bu
