@@ -1,0 +1,43 @@
+.about-wrapper {
+  width: 100vw;
+  height: calc(100vh - 110px);
+  line-height: 1.7;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 6rem;
+}
+
+.about-image {
+  height: 50%;
+  width: auto;
+}
+
+.about-image img {
+  height: 100%;
+  width: auto;
+}
+
+.about-paragraph {
+  white-space: pre-line;
+  width: 30vw;
+}
+
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
