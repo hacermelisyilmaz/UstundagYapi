@@ -10,7 +10,7 @@ export default function Header() {
       <div className="header-right">
         <Navigation />
 
-        <Link to="/form">
+        <Link to="/iletisim">
           <button className="form-btn">Talep Formu</button>
         </Link>
       </div>
