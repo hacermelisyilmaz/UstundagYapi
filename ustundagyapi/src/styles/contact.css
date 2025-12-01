@@ -1,0 +1,116 @@
+.contact-info div div {
+  display: flex;
+  flex-direction: column;
+  color: #1a1a1a;
+}
+
+.contact-info .phone div {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.contact-info .phone div div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+.contact-info .phone div div span:first-child {
+  font-weight: 500;
+}
+
+.contact-wrapper {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2rem 4rem;
+}
+
+.contact-title {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  height: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-form * {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+.contact-form-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact-form-line div {
+  width: 49%;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #777;
+}
+
+.input-error {
+  border-color: red !important;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: whitesmoke;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: rgb(16, 99, 151);
+}
+
+.checkbox input {
+  width: auto;
+}
