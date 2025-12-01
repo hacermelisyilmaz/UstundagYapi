@@ -22,10 +22,8 @@ export default function ContactForm() {
   };
 
   const validatePhone = (phoneRaw) => {
-    // Extract digits only
     const digits = phoneRaw.replace(/\D/g, "");
 
-    // Must start with 5, must be 10 digits
     return digits.length === 10 && digits.startsWith("5");
   };
 
