@@ -26,11 +26,8 @@ export default function AboutContent() {
     <div className="about-wrapper">
       <div className="about-title">
         <Line />
-        <span>Üstündağ Yapı</span>
-        <div className="biz-kimiz">
-          <h2>Biz</h2>
-          <h2>Kimiz?</h2>
-        </div>
+        <h2>Biz</h2>
+        <h2>Kimiz?</h2>
       </div>
 
       <div ref={paragraphRef} className="about-paragraph">
