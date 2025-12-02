@@ -2,6 +2,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { existingProjects, continuedProjects } from "../data/projectsdata";
+import Line from "../components/Line";
+import "../styles/projects.css";
 
 export default function ProjectsPage() {
   const [allImages, setAllImages] = useState([]);
@@ -10,6 +12,23 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     setAllImages([...existingProjects, ...continuedProjects]);
+  }, []);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".fade-left, .fade-up");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
   }, []);
 
   useEffect(() => {
@@ -40,8 +59,11 @@ export default function ProjectsPage() {
       <Header />
 
       <div className="projects-content">
-        <h2>Projelerimiz</h2>
-        <section className="section-block">
+        <Line className="fade-left" />
+        <h2 className="fade-left" style={{ animationDelay: "0.15s" }}>
+          Projelerimiz
+        </h2>
+        <section className="section-block fade-up">
           <h3>Devam Eden Projeler</h3>
 
           <div className="projects-grid">
@@ -58,7 +80,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        <section className="section-block">
+        <section className="section-block fade-up">
           <h3>Mevcut Projeler</h3>
 
           <div className="projects-grid">
