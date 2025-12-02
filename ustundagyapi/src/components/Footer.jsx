@@ -1,5 +1,6 @@
 import Navigation from "./Navigation";
 import logo from "../assets/logo.jpg";
+import "../styles/footer.css";
 
 export default function Footer() {
   return (
