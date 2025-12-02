@@ -1,3 +1,28 @@
+.contact-item {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+  margin-bottom: 2rem;
+}
+
+.contact-item.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-item:nth-child(1) {
+  transition-delay: 0s;
+}
+.contact-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.contact-item:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.contact-item:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
 .contact-info div div {
   display: flex;
   flex-direction: column;
