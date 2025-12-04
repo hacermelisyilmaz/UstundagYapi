@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import img12 from "../assets/12.jpg";
+import img12 from "../assets/img12.jpg";
 import "../styles/about.css";
 import Line from "./Line";
 
