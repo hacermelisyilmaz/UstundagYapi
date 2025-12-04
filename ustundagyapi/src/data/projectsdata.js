@@ -1,15 +1,15 @@
-import image01 from "../assets/1.jpg";
-import image02 from "../assets/2.jpg";
-import image03 from "../assets/3.jpg";
-import image04 from "../assets/4.jpg";
-import image05 from "../assets/5.jpg";
-import image06 from "../assets/6.jpg";
-import image07 from "../assets/7.jpg";
-import image08 from "../assets/8.jpg";
-import image09 from "../assets/9.jpg";
-import image10 from "../assets/10.jpg";
-import image11 from "../assets/11.jpg";
-import image12 from "../assets/12.jpg";
+import image01 from "../assets/img1.jpg";
+import image02 from "../assets/img2.jpg";
+import image03 from "../assets/img3.jpg";
+import image04 from "../assets/img4.jpg";
+import image05 from "../assets/img5.jpg";
+import image06 from "../assets/img6.jpg";
+import image07 from "../assets/img7.jpg";
+import image08 from "../assets/img8.jpg";
+import image09 from "../assets/img9.jpg";
+import image10 from "../assets/img10.jpg";
+import image11 from "../assets/img11.jpg";
+import image12 from "../assets/img12.jpg";
 
 export const existingProjects = [
   { id: 1, title: "Kalem Tekstil", img: image01 },
