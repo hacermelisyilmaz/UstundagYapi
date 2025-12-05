@@ -199,11 +199,7 @@ export default function ContactForm() {
             onChange={() => setAccepted(!accepted)}
           />
           <label htmlFor="consent">
-            <a
-              href="/kisisel-verilerin-korunmasi-politikasi"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/kisisel-verilerin-korunmasi-politikasi">
               Kişisel Verilerin Korunması Politikasını
             </a>{" "}
             okudum, onaylıyorum.
