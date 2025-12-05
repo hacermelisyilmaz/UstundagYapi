@@ -100,6 +100,10 @@ h2 {
     text-align: center;
   }
 
+  .projects-content {
+    padding: 2rem 2rem;
+  }
+
   .projects-sheet {
     padding: 2rem 1rem;
     height: auto;
@@ -162,6 +166,16 @@ h2 {
 }
 
 @media (max-width: 531px) {
+  .about-wrapper {
+    flex-direction: column;
+    padding: 4rem;
+  }
+
+  .about-paragraph {
+    padding: 0;
+    margin-top: 1rem;
+  }
+
   .contact-info {
     flex-wrap: nowrap;
     flex-direction: column;
