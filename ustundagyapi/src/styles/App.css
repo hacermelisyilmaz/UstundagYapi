@@ -176,17 +176,22 @@ h2 {
     margin-top: 1rem;
   }
 
+  .contact-wrapper {
+    padding: 2rem 2rem;
+  }
+
   .contact-info {
     flex-wrap: nowrap;
     flex-direction: column;
   }
 
   .contact-info .phone div {
-    justify-content: space-between;
+    flex-direction: column;
   }
 
   .contact-info .phone div div {
     margin-right: 0;
+    margin-bottom: 1rem;
   }
 
   .contact-info > div:nth-child(2) {
