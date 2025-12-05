@@ -17,12 +17,14 @@ export default function Privacy() {
           hazırlanmıştır.
         </p>
         <p>
-          <span>Web sitemizin adresi:</span>www.ustundagyapi.com.tr
+          <span>Web sitemizin adresi: </span>
+          <a href="/">www.ustundagyapi.com.tr</a>
         </p>
         <p>
-          Bu Gizlilik Politikası yalnızca www.ustundagyapi.com.tr internet
-          sitesi için geçerlidir. Politikayı kabul etmemeniz hâlinde internet
-          sitemizi kullanmayı durdurmanız gerekmektedir.
+          Bu Gizlilik Politikası yalnızca{" "}
+          <a href="/">www.ustundagyapi.com.tr</a> internet sitesi için
+          geçerlidir. Politikayı kabul etmemeniz hâlinde internet sitemizi
+          kullanmayı durdurmanız gerekmektedir.
         </p>
         <p>
           <span>Hangi kişisel bilgileri hangi amaçlarla topluyoruz?</span>
@@ -48,9 +50,12 @@ export default function Privacy() {
           değişiklikler bu sayfa üzerinden ilan edilecektir.
         </p>
         <p>
-          <span>İletişim</span>Gizlilik Politikası’na ilişkin tüm soru, talep ve
-          görüşlerinizi <a href="/iletisim">iletişim</a> sayfasını kullanarak
-          bize iletebilirsiniz:
+          <span>İletişim</span>
+          <div>
+            Gizlilik Politikası’na ilişkin tüm soru, talep ve görüşlerinizi{" "}
+            <a href="/iletisim">iletişim</a> sayfasını kullanarak bize
+            iletebilirsiniz.
+          </div>
         </p>
       </div>
 
