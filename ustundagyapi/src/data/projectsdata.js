@@ -17,7 +17,7 @@ export const existingProjects = [
   { id: 3, title: "Finansbank", img: image03 },
   { id: 4, title: "Beşikler Deri", img: image04 },
   { id: 5, title: "Volvo Grup", img: image08 },
-  { id: 6, title: "Akkaya A.Ş. Tekstil", img: image07 },
+  { id: 6, title: "Akkayalar Tekstil", img: image07 },
   { id: 7, title: "", img: image05 },
   { id: 8, title: "", img: image06 },
   { id: 9, title: "", img: image09 },
